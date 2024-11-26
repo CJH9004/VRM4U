@@ -49,7 +49,7 @@ FRigUnit_VRMInitControllerTransform_Execute() {
 
 		auto* elem = nullList.FindByPredicate(
 			[&table](FRigNullElement* e) {
-				if (e->GetNameString().Compare(table.BoneUE4 + "_s") == 0) {
+				if (e->GetName().Compare(table.BoneUE4 + "_s") == 0) {
 					return true;
 				}
 				return false;
@@ -133,7 +133,7 @@ FRigUnit_VRMGenerateBoneToControlTable_Execute()
 
 		auto *elem = controllerList.FindByPredicate(
 			[&table](FRigControlElement *e) {
-				if (e->GetNameString().Compare(table.BoneUE4 + "_c") == 0) {
+				if (e->GetName().Compare(table.BoneUE4 + "_c") == 0) {
 					return true;
 				}
 				return false;
